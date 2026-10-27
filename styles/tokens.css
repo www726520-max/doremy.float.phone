@@ -1201,3 +1201,38 @@
   background: var(--c-adv-input-border);
   border-radius: 2px;
 }
+/* 手机端：去掉外壳，铺满屏幕 */
+@media (max-width: 500px) {
+  :root {
+    --phone-screen-width: 100vw !important;
+    --phone-screen-height: 100dvh;
+    --phone-screen-radius: 0px;
+    --phone-frame-size: 0px !important;
+    --phone-case-padding: 0px !important;
+    --phone-case-border-size: 0px !important;
+  }
+  .app-root,
+  .app-root.splash-root {
+    width: 100vw !important;
+    margin: 0;
+    padding: 0;
+  }
+  .phone-shell-wrap,
+  .splash-shell-wrap {
+    width: 100vw !important;
+    gap: 0;
+  }
+  .phone-case,
+  .phone-frame {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .phone-case::before,
+  .phone-case::after,
+  .phone-frame::before,
+  .phone-frame::after {
+    display: none;
+  }
+}
