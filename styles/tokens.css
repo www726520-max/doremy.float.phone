@@ -1236,3 +1236,26 @@
     display: none;
   }
 }
+/* 锁定整页高度，禁止整页滑动 */
+@media (max-width: 500px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  :root {
+    --phone-screen-height: 100vh;
+  }
+  .app-root,
+  .app-root.splash-root {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+@supports (height: 100dvh) {
+  @media (max-width: 500px) {
+    :root {
+      --phone-screen-height: 100dvh;
+    }
+  }
+}
