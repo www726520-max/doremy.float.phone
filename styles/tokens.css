@@ -1259,3 +1259,8 @@
     }
   }
 }
+@media (max-width: 500px) {
+  .splash-enter-button {
+    bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+}
