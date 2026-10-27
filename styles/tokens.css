@@ -1264,3 +1264,21 @@
     bottom: calc(64px + env(safe-area-inset-bottom, 0px));
   }
 }
+@media (max-width: 500px) {
+  html,
+  body {
+    background: transparent;
+  }
+  .app-root,
+  .app-root.splash-root {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+  }
+  .phone-case,
+  .phone-frame {
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
